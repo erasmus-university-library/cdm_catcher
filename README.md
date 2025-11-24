@@ -23,7 +23,7 @@ Make sure the following environment variables are set:
 
 (or on Windows edit the `cdm_catcher.bat` file)
 
-Note: the `CDM_BASE_URL` can be found by visiting the following URL: https://<YOUR PREFIX>.contentdm.oclc.org/utils/diagnostics
+Note: the `CDM_BASE_URL` can be found by visiting the following URL: https://[YOUR_PREFIX].contentdm.oclc.org/utils/diagnostics
 
 ### Run
 
@@ -33,13 +33,13 @@ The `input.csv` file should have the following columns:
 
 
 | col_alias | record_id | field  | value                   |
-------------------------------------------------------------
+|-----------|-----------|--------|-------------------------|
 | /tstpub   |         5 | subjec | The new updated subject |
 
 ## Why
 
 After writing this, I found multiple other implementations on GitHub, none of them listed from the OCLC docs.
-I decided to publish this because the script has some nice validation features. It checks for valid collections / field nicks / record_ids. It will skip records that have already been updated and will exit the script when an error occurs.
+I decided to publish this because the script has some nice validation features. It checks for valid collections / field nicks / record_ids. It will skip records that have already been updated and will exit the script when an error occurs with a usefull error message.
 
 ## License
 
