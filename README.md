@@ -39,7 +39,7 @@ The `input.csv` file should have the following columns:
 ## Why
 
 After writing this, I found multiple other implementations on GitHub, none of them listed from the OCLC docs.
-I decided to publish this because the script has some nice validation features. It checks for valid collections / field nicks / record_ids. It will skip records that have already been updated and will exit the script when an error occurs with a usefull error message.
+I decided to publish this because the script has some nice validation features. It checks for valid collections / field nicks / record_ids. It will skip records that have already been updated and will exit the script when an error occurs with a useful error message.
 
 ## License
 
