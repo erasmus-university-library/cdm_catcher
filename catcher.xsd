@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10 svn-revision#919b322c92f13ad085a933e8dd6dd35d4947364b. --><xs:schema xmlns:tns="http://catcherws.cdm.oclc.org/v6.0.0/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://catcherws.cdm.oclc.org/v6.0.0/">
+
+<xs:element name="getCONTENTdmCatalog" type="tns:getCONTENTdmCatalog"/>
+
+<xs:element name="getCONTENTdmCatalogResponse" type="tns:getCONTENTdmCatalogResponse"/>
+
+<xs:element name="getCONTENTdmCollectionConfig" type="tns:getCONTENTdmCollectionConfig"/>
+
+<xs:element name="getCONTENTdmCollectionConfigResponse" type="tns:getCONTENTdmCollectionConfigResponse"/>
+
+<xs:element name="getCONTENTdmControlledVocabTerms" type="tns:getCONTENTdmControlledVocabTerms"/>
+
+<xs:element name="getCONTENTdmControlledVocabTermsResponse" type="tns:getCONTENTdmControlledVocabTermsResponse"/>
+
+<xs:element name="getCONTENTdmHTTPTransferVersion" type="tns:getCONTENTdmHTTPTransferVersion"/>
+
+<xs:element name="getCONTENTdmHTTPTransferVersionResponse" type="tns:getCONTENTdmHTTPTransferVersionResponse"/>
+
+<xs:element name="getWSVersion" type="tns:getWSVersion"/>
+
+<xs:element name="getWSVersionResponse" type="tns:getWSVersionResponse"/>
+
+<xs:element name="metadata" type="tns:metadata"/>
+
+<xs:element name="processCONTENTdm" type="tns:processCONTENTdm"/>
+
+<xs:element name="processCONTENTdmResponse" type="tns:processCONTENTdmResponse"/>
+
+<xs:complexType name="processCONTENTdm">
+<xs:sequence>
+<xs:element name="action" type="xs:string" minOccurs="0"/>
+<xs:element name="cdmurl" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="license" type="xs:string" minOccurs="0"/>
+<xs:element name="collection" type="xs:string" minOccurs="0"/>
+<xs:element name="disableValidation" type="xs:string" minOccurs="0"/>
+<xs:element name="metadata" type="tns:metadataWrapper" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="metadataWrapper">
+<xs:sequence>
+<xs:element name="metadataList" type="tns:metadataList" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="metadataList">
+<xs:sequence>
+<xs:element name="metadata" type="tns:metadata" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="metadata">
+<xs:sequence>
+<xs:element name="field" type="xs:string" minOccurs="0"/>
+<xs:element name="value" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="processCONTENTdmResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCONTENTdmCollectionConfig">
+<xs:sequence>
+<xs:element name="cdmurl" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="license" type="xs:string" minOccurs="0"/>
+<xs:element name="collection" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCONTENTdmCollectionConfigResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getWSVersion">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getWSVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCONTENTdmHTTPTransferVersion">
+<xs:sequence>
+<xs:element name="cdmurl" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCONTENTdmHTTPTransferVersionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCONTENTdmControlledVocabTerms">
+<xs:sequence>
+<xs:element name="cdmurl" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="license" type="xs:string" minOccurs="0"/>
+<xs:element name="collection" type="xs:string" minOccurs="0"/>
+<xs:element name="field" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCONTENTdmControlledVocabTermsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCONTENTdmCatalog">
+<xs:sequence>
+<xs:element name="cdmurl" type="xs:string" minOccurs="0"/>
+<xs:element name="username" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+<xs:element name="license" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getCONTENTdmCatalogResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
