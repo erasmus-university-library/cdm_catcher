@@ -10,9 +10,6 @@ from zeep import Client
 from zeep.loader import load_external
 from tqdm import tqdm
 
-# note that the CDM_BASE_URL can be found by visiting the following URL:
-# https://<YOUR PREFIX>.contentdm.oclc.org/utils/diagnostics
-
 for var_name in ['CDM_USER', 'CDM_PASS', 'CDM_LICENSE', 'CDM_BASE_URL']:
     missing = False
     if var_name not in os.environ:
@@ -146,7 +143,8 @@ if __name__ == '__main__':
     cols = ['col_alias', 'record_id', 'field', 'value']
 
     updates = []
-    for row_num, row in enumerate(csv.reader(open(sys.argv[1]))):
+    # validate the CSV file
+    for row_num, row in enumerate(csv.reader(open(input_csv_file))):
         if row_num == 0:
             missing_columns = set(cols) - set(row)
             if missing_columns:
