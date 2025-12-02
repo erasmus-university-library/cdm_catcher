@@ -6,6 +6,8 @@ The script allows you to update specific field values in ContentDM, read from a 
 
 For a more complete implementation of the Catcher API, see the [cdm-catcher tool by Baledin](https://github.com/Baledin/cdm-catcher)
 
+This project also includes a script called `cdm_export.py` which creates a newline separated JSON file containing the metadata of a specific collection.
+
 ## Use
 
 ### Install

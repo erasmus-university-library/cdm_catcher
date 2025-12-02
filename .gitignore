@@ -6,3 +6,4 @@ include
 share
 *.pyc
 pyvenv.cfg
+export.json
